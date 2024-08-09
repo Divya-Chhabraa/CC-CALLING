@@ -105,7 +105,7 @@ io.on('connect', socket => {
         // Emit the updated user count to everyone in the room
         io.to(room).emit('user count', rooms[room].length);
 
-        // Clean up the mappings
+
         delete socketroom[socket.id];
         delete socketname[socket.id];
         delete micSocket[socket.id];
